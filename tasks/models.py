@@ -3,9 +3,9 @@ from django.db import models
 
 class Task(models.Model):
     OPTIONS_CATEGORY = (
-        ('urgent', 'Urgente'),
-        ('important', 'Importante'),
-        ('when_you_have_time', 'Quando tiver tempo')
+        ('urgente', 'Urgente'),
+        ('importante', 'Importante'),
+        ('quando tiver tempo', 'Quando tiver tempo')
     )
     OPTIONS_STATUS = (
         ('concluded', 'Concluído'),
