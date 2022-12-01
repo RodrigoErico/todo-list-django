@@ -16,6 +16,6 @@ class Task(models.Model):
     description = models.CharField(max_length=400)
     creation = models.DateTimeField(auto_now_add=True)
     category = models.CharField(
-        max_length=25, choices=OPTIONS_CATEGORY, default='important')
+        max_length=25, choices=OPTIONS_CATEGORY, default='importante')
     status = models.CharField(
         max_length=25, choices=OPTIONS_STATUS, default='pending')

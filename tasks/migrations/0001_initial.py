@@ -14,11 +14,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Task',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('description', models.CharField(max_length=400)),
                 ('creation', models.DateTimeField(auto_now_add=True)),
-                ('category', models.CharField(choices=[('urgent', 'Urgente'), ('important', 'Importante'), ('when_you_have_time', 'Quando tiver tempo')], default='important', max_length=25)),
-                ('status', models.CharField(choices=[('concluded', 'Concluído'), ('pending', 'Pendente'), ('suspended', 'Suspenso')], default='pending', max_length=25)),
+                ('category', models.CharField(choices=[('urgente', 'Urgente'), ('importante', 'Importante'), (
+                    'quando tiver tempo', 'Quando tiver tempo')], default='important', max_length=25)),
+                ('status', models.CharField(choices=[('concluded', 'Concluído'), (
+                    'pending', 'Pendente'), ('suspended', 'Suspenso')], default='pending', max_length=25)),
             ],
         ),
     ]
